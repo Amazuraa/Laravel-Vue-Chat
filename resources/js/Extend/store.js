@@ -6,6 +6,9 @@ export const store = reactive({
     chat: [],
     chatId: -1,
     user: [],
+    chatList: [],
+    userTarget: [],
+    chatFirst: 0,
 });
 
 export const mutations = {
@@ -20,5 +23,31 @@ export const mutations = {
     },
     setChatId(id) {
         store.chatId = id;
+    },
+    getChatList(id) {
+        axios
+            .get('/api/chatList/' + id)
+            .then(res => {
+                store.chatList = res.data.data;
+                // console.log(res.data.data);
+            });
+    },
+    searchChat(key) {
+        axios
+            .get('/api/user/' + key)
+            .then(res => {
+                store.chatList = res.data.data;
+                // console.log(res.data.data);
+            });
+    },
+    setChatTarget(id) {
+        axios
+            .get('/api/user/detail/' + id)
+            .then(res => {
+                store.userTarget = res.data.data;              
+            })
+    },
+    setMode(id) {
+        store.chatFirst = id;
     }
 };

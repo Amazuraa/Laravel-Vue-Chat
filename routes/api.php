@@ -27,4 +27,5 @@ Route::post('/chat', [ChatController::class, 'create']);
 Route::get('/chat/{id}', [ChatController::class, 'show']);
 Route::patch('/chat/{id}', [ChatController::class, 'edit']);
 
-Route::get('/user/{email}', [UserController::class, 'findUser']);
+Route::get('/user/{key}', [UserController::class, 'findUser']);
+Route::get('/user/detail/{id}', [UserController::class, 'getUser']);

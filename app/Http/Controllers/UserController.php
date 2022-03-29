@@ -10,11 +10,19 @@ class UserController extends Controller
 {
     use ApiResponser;
 
-    public function findUser($email)
+    public function findUser($key)
     {
-        $data = User::select('name', 'email', 'picture')
-                    ->where('email', 'LIKE', '%'.$email.'%')
+        $data = User::select('id', 'name', 'picture')
+                    ->where('name', 'LIKE', '%'.$key.'%')
                     ->get();
+        return $this->success($data);
+    }
+
+    public function getUser($id)
+    {
+        $data = User::select('id', 'name', 'picture')
+                    ->where('id', $id)
+                    ->get()->first();
         return $this->success($data);
     }
 }
