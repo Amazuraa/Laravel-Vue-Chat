@@ -9,8 +9,6 @@ composer install
 &nbsp; Install NPM dependecies & Build asset
 ```bash
 npm install
-
-npm run dev
 ```
 
 &nbsp; Setup Config
