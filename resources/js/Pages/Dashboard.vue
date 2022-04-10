@@ -17,11 +17,12 @@ import axios from 'axios';
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="bg-white border-b border-gray-200">
 
-                        <div class="container mx-auto">
+                        <div class="w-full">
                             <div class="min-w-full rounded lg:grid lg:grid-cols-3">
                                 <div class="border-r border-gray-300 lg:col-span-1">
                                     <ChatSearch></ChatSearch>
 
+                                    <!-- ChatList -->
                                     <ul class="overflow-auto h-[32rem]">
                                         <h2 class="my-2 mb-2 ml-2 text-lg text-gray-600">Chats</h2>
                                         <li>
@@ -105,6 +106,7 @@ export default {
     },
     created() {
         this.getChats();
+        store.loading = false;
     },
     mounted() {},
     methods: {

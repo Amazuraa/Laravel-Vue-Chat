@@ -35,7 +35,7 @@ class ChatController extends Controller
         $id = $data['id'];
 
         $users = json_decode($request['user_chat']);
-        $new = [];
+        // $new = [];
 
         foreach ($users as $val) {
             $data_new = User::find($val);

@@ -5,6 +5,7 @@ import axios from 'axios';
 export const store = reactive({
     chat: [],
     chatId: -1,
+    loading: false,
     user: [],
     chatList: [],
     userTarget: [],
@@ -23,6 +24,7 @@ export const mutations = {
     },
     setChatId(id) {
         store.chatId = id;
+        store.loading = true;
     },
     getChatList(id) {
         axios
