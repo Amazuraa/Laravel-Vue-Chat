@@ -31,3 +31,7 @@ php artisan db:seed (optional)
 ```bash
 php artisan serve
 ```
+
+## Testing Account
+email : ``` userx@gmail.com | usery@gmail.com | userz@gmail.com ``` <br>
+password : ``` laravue_chat ```
