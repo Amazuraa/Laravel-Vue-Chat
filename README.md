@@ -6,7 +6,7 @@
 composer install
 ```
 
-&nbsp; Install NPM dependecies & Build asset
+&nbsp; Install NPM dependecies
 ```bash
 npm install
 ```
