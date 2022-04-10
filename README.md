@@ -1,13 +1,12 @@
 ## Simple Chat Laravel - Vue.js
 
+&nbsp; ![ezgif com-gif-maker](https://user-images.githubusercontent.com/37819857/162602232-2d991afd-3821-43ce-aa17-399aad86a2f8.gif)
 
-&nbsp; Install PHP dependecies
+
+&nbsp; Install PHP & NPM dependecies
 ```bash
 composer install
-```
 
-&nbsp; Install NPM dependecies
-```bash
 npm install
 ```
 
